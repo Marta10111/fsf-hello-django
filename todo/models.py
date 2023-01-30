@@ -1,13 +1,11 @@
-from django.test import TestCase
-from .models import Item
+from django.db import models
+
+# Create your models here.
 
 
-class TestModels(TestCase):
+class Item(models.Model):
+    name = models.CharField(max_length=50, null=False, blank=False)
+    done = models.BooleanField(null=False, blank=False, default=False)
 
-    def test_done_defaults_to_false(self):
-        item = Item.objects.create(name='Test Todo Item')
-        self.assertFalse(item.done)
-
-    def test_item_string_method_returns_name(self):
-        item = Item.objects.create(name='Test Todo Item')
-        self.assertEqual(str(item), 'Test Todo Item')
+    def __str__(self):
+        return self.name
