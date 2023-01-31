@@ -23,7 +23,7 @@ SECRET_KEY = '2erm2g25fi&()6+d)rp0(1gw!vp^v2aoxpmfebc^1_2gbjc-@#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['manta101-django-todo-app']
+ALLOWED_HOSTS = ['manta101-django-todo-app.herokuapp.com']
 
 
 # Application definition
